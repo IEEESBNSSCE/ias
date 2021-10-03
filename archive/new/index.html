@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<!-- meta charec set -->
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Page Title -->
+	<title>IAS | IEEE Industry Applications Society | IEEE Students Branch NSSCE</title>
+	<!-- Meta Description -->
+	<meta name="description" content="IEEE IAS SBC NSSCE">
+	<meta name="keywords" content="IEEE, IAS, NSSCE, Industry, Application, Society, NSS, SB, Student, Branch">
+	<meta name="author" content="Anjali Dileepkumar">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Font -->
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- CSS
+		================================================== -->
+	<!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Twitter Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- jquery.fancybox  -->
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<!-- animate -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- media-queries -->
+	<link rel="stylesheet" href="css/media-queries.css">
+
+	<link rel="shortcut icon" href="img1/favicon.png">
+
+	<!-- Modernizer Script for old Browsers -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<style>
+		.mySlides {
+			display: none
+		}
+
+		/* Slideshow container */
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+		}
+
+		/* Next & previous buttons */
+		.prev,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			padding: 16px;
+			margin-top: -22px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+			right: 0;
+			border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Caption text */
+		.text {
+			color: #f2f2f2;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+		}
+
+		.active,
+		.dot:hover {
+			background-color: #717171;
+		}
+
+
+
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+
+			.prev,
+			.next,
+			.text {
+				font-size: 11px
+			}
+		}
+
+		/*
+Slider style ends
+*/
+		* {
+			box-sizing: border-box;
+		}
+
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline {
+			position: relative;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+			content: '';
+			position: absolute;
+			width: 6px;
+			background-color: black;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			margin-left: -3px;
+		}
+
+		/* Container around content */
+		.containe {
+			padding: 10px 40px;
+			position: relative;
+			background-color: inherit;
+			width: 50%;
+		}
+
+		/* The circles on the timeline */
+		.containe::after {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			right: -17px;
+			background-color: black;
+			border: 4px solid #389042;
+			top: 15px;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		/* Place the container to the left */
+		.left {
+			left: 0;
+		}
+
+		/* Place the container to the right */
+		.right {
+			left: 50%;
+		}
+
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+			content: " ";
+			height: 0;
+			position: absolute;
+			top: 22px;
+			width: 0;
+			z-index: 1;
+			right: 30px;
+			border: medium solid gray;
+			border-width: 10px 0 10px 10px;
+			border-color: transparent transparent transparent gray;
+		}
+
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+			content: " ";
+			height: 0;
+			position: absolute;
+			top: 22px;
+			width: 0;
+			z-index: 1;
+			left: 30px;
+			border: medium solid gray;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent gray transparent transparent;
+		}
+
+		/* Fix the circle for containers on the right side */
+		.right::after {
+			left: -16px;
+		}
+
+		/* The actual content */
+		.content {
+			padding: 20px 30px;
+			background-color: #389042;
+			position: relative;
+			border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeline on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+
+			/* Place the timelime to the left */
+			.timeline::after {
+				left: 31px;
+			}
+
+			/* Full-width containers */
+			.containe {
+				width: 100%;
+				padding-left: 70px;
+				padding-right: 25px;
+			}
+
+			/* Make sure that all arrows are pointing leftwards */
+			.containe::before {
+				left: 60px;
+				border: medium solid gray;
+				border-width: 10px 10px 10px 0;
+				border-color: transparent gray transparent transparent;
+			}
+
+			/* Make sure all circles are at the same spot */
+			.left::after,
+			.right::after {
+				left: 15px;
+			}
+
+			/* Make all right containers behave like the left ones */
+			.right {
+				left: 0%;
+			}
+		}
+	</style>
+
+</head>
+
+<body id="body">
+
+	<!-- preloader -->
+	<div id="preloader">
+		<img src="img1/preloader.gif" alt="Preloader">
+	</div>
+	<!-- end preloader -->
+
+	<!-- 
+        Fixed Navigation
+        ==================================== -->
+	<header id="navigatio" class="navbar-fixed-top navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- responsive nav button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<i class="fa fa-bars fa-2x"></i>
+				</button>
+				<!-- /responsive nav button -->
+
+				<!-- name-->
+				<a class="navbar-brand" href="#body">
+
+					<img src="img1/logo.png" alt="IEEE">
+
+				</a>
+				<!-- /logo -->
+			</div>
+
+			<!-- main nav -->
+			<nav class="collapse navbar-collapse navbar-right" role="navigatio">
+				<ul id="nav" class="nav navbar-nav">
+					<li><a href="#body">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#staff">Staff Advisor</a></li>
+					<li><a href="#team">Excom</a></li>
+					<li><a href="#events">Events</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+				</ul>
+			</nav>
+			<!-- /main nav -->
+
+		</div>
+	</header>
+	<!--
+        End Fixed Navigation
+        ==================================== -->
+
+
+
+	<!--
+        Home Slider
+        ==================================== -->
+
+	<section id="slider">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+			<!-- Indicators bullet -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="img1/slider/2.jpg"></li>
+			</ol>
+			<!-- End Indicators bullet -->
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+
+				<!-- single slide -->
+				<div class="item active" style="background-image: url(img1/slider/8.jpg);">
+					<div class="carousel-caption">
+						<b>
+							<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">
+								<strong>IAS</strong></h2>
+							<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span
+									class="color"><strong>IEEE Industry Applications Society</strong></h3>
+							<p data-wow-duration="1000ms" class="wow slideInRight animated"><strong> IEEE SB NSSCE
+								</strong></p>
+						</b>
+
+						<ul class="social-links text-center">
+							<li><a href="https://www.instagram.com/ieeesbnssce"><i
+										class="fa fa-instagram fa-lg"></i></a></li>
+							<li><a href="https://www.facebook.com/ieeenssce/"><i class="fa fa-facebook fa-lg"></i></a>
+							</li>
+							<!--<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>-->
+						</ul>
+					</div>
+				</div>
+				<!-- end single slide -->
+
+				<!-- single slide -->
+				<div class="item" style="background-image: url(img1/slider/1.jpg);">
+					<div class="carousel-caption">
+						<h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">
+							<strong>IAS</strong></h2>
+						<h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color"><strong>IEEE
+									Industry Applications Society</strong></h3>
+						<p data-wow-duration="1000ms" class="wow slideInRight animated"><strong> IEEE SB NSSCE </strong>
+						</p>
+
+						<ul class="social-links text-center">
+							<li><a href="https://www.facebook.com/ieeenssce/"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://www.instagram.com/ieeesbnssce"><i class="fa fa-instagram"></i></a></li>
+							<!--<li><a href=""><i class="fa fa-google-plus fa-lg"></i></a><fa fa-instagram fa-lg/li>
+								<li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>-->
+						</ul>
+					</div>
+				</div>
+				<!-- end single slide -->
+
+			</div>
+			<!-- End Wrapper for slides -->
+
+		</div>
+	</section>
+
+	<section id="about" class="team">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>What is IEEE?</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+					<p style="text-align: justify; margin: 20px;">
+						IEEE and its members inspire a global community to innovate for a better tomorrow through its
+						more than 423,000 members in over 160 countries, and its highly cited publications, conferences,
+						technology standards, and professional and educational activities. IEEE is the trusted “voice”
+						for engineering, computing, and technology information around the globe.
+					</p>
+
+				</div>
+
+
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>History of IEEE!</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+					<p style="text-align: justify; margin: 20px;">
+						IEEE’s roots go back to 1884 when electricity began to become a major influence in society.
+						There was one major established electrical industry, the telegraph, which since the 1840s had
+						come to connect the world with a data communications system faster than the speed of
+						transportation. The telephone and electric power and light industries had just gotten underway.
+					</p>
+
+				</div>
+
+
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>What is Industry Application Society</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+					<p style="text-align: justify; margin: 20px;">
+						If your engineering interests are the needs of the industrial or commercial sector, the Industry
+						Applications Society (IAS) will be a valuable professional connection. One of the largest
+						special interest societies within the Institute of Electrical and Electronics Engineers (IEEE),
+						the IAS focuses specifically on the unique needs of industry and commerce. IAS is a source of
+						professional power to its nearly 10,000 worldwide members.
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Home SliderEnd
+        ==================================== -->
+	<section id="about" class="facts">
+		<div class="parallax-overlay">
+			<div class="container">
+				<div class="row number-counters">
+
+					<div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
+						<h2>AIM</h2>
+						<div class="devider"><i class="fa fa-heart-o fa-lg"></i>
+						</div>
+						<p style="text-align: justify;font-size: medium; margin: 20px;">Exchange information
+							with the foremost industrial experts through personal participation in a local
+							chapter meetings, seminars and regional, national and international conferences
+							which can be accessed at Events and Conferences page. The IAS has one of the/
+							largest special interest programs of any IEEE society</p>
+
+
+						<p style="font-size: large;"><Strong>Valuable Professional Publications. </Strong></p>
+						<p style="text-align: justify;margin: 20px;font-size: medium;">IEEE publishes journals,
+							conferences, and standards in electrical, electronics, and all related technologies.
+							Also a membership benefit, through IEEE Xplore digital library, members can easily
+							search over nearly two million IEEE documents, including otherwise difficult-to-find
+							conference papers.</p>
+
+
+						<p style="font-size: large;"><Strong>A Chance to Advance Your Industry.</Strong></p>
+						<p style="text-align: justify; margin: 20px;font-size: medium;">The opportunity to
+							personally contribute to the betterment of your industry is a key IAS member
+							benefit. Committees within IAS play a central role in establishing over 25% of all
+							IEEE industry standards. Four technical departments, each serving a key segment of
+							industry, bring professionals together to advance the interests of the field as a
+							whole.</p>
+						</p>
+					</div>
+
+					<!-- first count item -->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--
+        staff advisor
+        ==================================== -->
+
+	<section id="staff" class="team">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>Staff Advisor</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+					<h4 class="media-heading" style="text-align: center"><strong>DR.VASANTHI V</strong></h4>
+					<figure style="margin-right: 20px;"
+						class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+						data-wow-duration="500ms">
+						<div class="member-thumb">
+							<center>
+								<img src="img1/advisors/3.jpeg" alt="Team Member" class="img-responsive"></center>
+						</div>
+						<h4>DR.VASANTHI V</h4>
+						<span style="color: black;">EEE Department NSSCE</span>
+					</figure>
+					<p style="text-align: justify; margin: 20px;">
+						<br>Working as an Associate Professor in EEE Department since 1999.Persued B.Tech from N.S.S.
+						College of Engineering, Palakkad in the year 1996, M.Tech from NIT Calicut in the year 2006,
+						Ph.D in Power Electronics from NIT Calicut in the year 2015.</p>
+				</div>
+
+				<!-- single member -->
+
+				<!-- end single member -->
+			</div>
+		</div>
+	</section>
+	<!--
+        ExCom
+        ==================================== -->
+
+	<section id="team" class="team">
+		<div class="container">
+			<div class="row">
+				<div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+					<h2>ExCom</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div><br><br>
+				</div>
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms">
+					<div class="member-thumb">
+						<img src="img1/team/1.jpg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Nayana C T</h5>
+							<p>Chairman</p>
+							<ul class="social-links text-center">
+								<li><a href="mailto:nayana@ieee.org"><i class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Nayana C T</h4>
+					<span style="color: black;"><i>Chairman</i></span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="member-thumb">
+						<img src="img1/team/2.jpg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Abhisek A</h5>
+							<p>Vice Chairman</p>
+							<ul class="social-links text-center">
+								<li><a href="mailto:abhisekkrishnan@ieee.org"><i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Abhisek A</h4>
+					<span style="color: black;"><i>Vice Chairman</i></span>
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="600ms">
+					<div class="member-thumb">
+						<img src="img1/team/3.jpg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Sharika P </h5>
+							<p>Secretary</p>
+							<ul class="social-links text-center">
+								<li><a href="mailto:sharupmenon999@gmail.com"><i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Sharika P</h4>
+					<span style="color: black;"><i>Secretary</i></span>
+
+				</figure>
+				<!-- end single member -->
+
+				<!-- single member -->
+				<figure class="team-member col-md-3 col-sm-6 col-xs-12 text-center wow fadeInUp animated"
+					data-wow-duration="500ms" data-wow-delay="900ms">
+					<div class="member-thumb">
+						<img src="img1/team/25.jpg" alt="Team Member" class="img-responsive">
+						<figcaption class="overlay">
+							<h5>Gayathri M</h5>
+							<p>Treasurer</p>
+							<ul class="social-links text-center">
+								<li><a href="mailto:gayathrimk7300@gmail.com"><i
+											class="fa fa-google-plus fa-lg"></i></a></li>
+							</ul>
+						</figcaption>
+					</div>
+					<h4>Gayathri M</h4>
+					<span style="color: black;"><i>Treasurer</i></span>
+
+				</figure>
+				<!-- end single member -->
+				<br><br><br><br><br><br>
+			</div>
+		</div>
+	</section>
+
+	<!--
+        End Meet Our Team
+        ==================================== -->
+
+
+	<!--
+        Contact Us
+        ==================================== -->
+
+	<!--<section id="contact" class="contact">
+			<div class="container">
+				<div class="row mb50">
+				
+					<div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
+						<h2>Let’s Discuss</h2>
+						<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+					</div>
+					
+					<div class="sec-sub-title text-center wow rubberBand animated" data-wow-duration="1000ms">
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+					</div>
+					
+					<!-- contact address -->
+	<!--<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
+						<div class="contact-address">
+							<h3>Cras at ultrices erat, sed vulputate!</h3>
+							<p>2345 Setwant natrer, 1234,</p>
+							<p>Washington. United States.</p>
+							<p>(401) 1234 567</p>
+						</div>
+					</div>
+					<!-- end contact address -->
+
+	<!-- contact form -->
+	<!--<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form">
+							<h3>Say hello!</h3>
+							<form action="#" id="contact-form">
+								<div class="input-group name-email">
+									<div class="input-field">
+										<input type="text" name="name" id="name" placeholder="Name" class="form-control">
+									</div>
+									<div class="input-field">
+										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
+									</div>
+								</div>
+								<div class="input-group">
+									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+								</div>
+								<div class="input-group">
+									<input type="submit" id="form-submit" class="pull-right" value="Send message">
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- end contact form -->
+
+	<!-- footer social links -->
+	<!--<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
+						<ul class="footer-social">
+							<li><a href="https://www.behance.net/Themefisher"><i class="fa fa-behance fa-2x"></i></a></li>
+							<li><a href="https://www.twitter.com/Themefisher"><i class="fa fa-twitter fa-2x"></i></a></li>
+							<li><a href="https://dribbble.com/themefisher"><i class="fa fa-dribbble fa-2x"></i></a></li>
+							<li><a href="https://www.facebook.com/Themefisher"><i class="fa fa-facebook fa-2x"></i></a></li>
+						</ul>
+					</div>
+					<!-- end footer social links -->
+
+	<!--</div>
+			</div>
+			
+			<!-- Google map -->
+	<!--<div id="map_canvas" class="wow bounceInDown animated" data-wow-duration="500ms"></div>
+			<!-- End Google map -->
+
+	<!--</section>-->
+
+
+	<section id="events" class="works clearfix">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center">
+					<h2>EVENTS</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="timeline" id="events">
+
+
+			<div class="containe right">
+				<div class="content">
+					<h2><u>Technical Interactive session with Alumni </u></h2> <br>
+					<h4> 17<sup>th</sup> Jan, 2020</h3><br>
+						<img src="img1/events/17.jpg" alt="Session By Alumini" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">
+							An interactive session was conducted by Alumni Association NSSCE with IEEE IAS SBC NSSCE,
+							Palakkad for the students. The session was on 16/01/2020 at 1:00 pm in DLH hall. The session
+							was
+							conducted by two alumnis Mr. Prakash Bare, cofounder GDA Technologies INC, USAnd Smt. Lekha
+							Balachandran, Managing partner, Resitech Electricals. 72 students from various branches
+							actively
+							participated in the interactive session.
+						</p>
+				</div>
+			</div>
+
+			<div class="containe left">
+				<div class="content">
+					<h2><u>Snapshot - Photography Constest</u></h2> <br>
+					<h4> 11<sup>th</sup> Nov, 2019</h3><br>
+						<br>
+						<img src="img1/events/16.png" alt="Snapshot" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">
+							The IEEE IAS Student Branch Chapter of NSSCE in collaboration with Friday photo club
+							conducted a
+							photography competition named Snapshot as a pre-event of XPERION 2020. The theme was unseen
+							frames of NSSCE. The competition started on 11th November 2019 and ends on 20th November
+							2019.The entries was screened and uploaded in Instagram page of Friday Photo Club. The
+							evaluation was done based on the likes got on Instagram page and FPC Coordinators.
+						</p>
+				</div>
+			</div>
+
+			<div class="containe right">
+				<div class="content">
+					<h2><u>Section Distinguished Lecture Program</u></h2> <br>
+					<h4> 31<sup>st</sup> Oct, 2019</h3><br>
+						<img src="img1/events/15.jpg" alt="SDLP" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">The Section Distinguished Lecture Program was conducted by IEEE
+							IAS
+							Student Branch Chapter NSS College of Engineering, Palakkad in collaboration with IEEE
+							Kerala
+							Section on 31st October 2019. The half-day session was handled by renowned speaker Dr.
+							Deepak
+							Mishra, Department of Avionics, IIST Thiruvananthapuram.
+							<br><br>
+							The distinguished lecture program was on Machine Learning, which is very prominent as far as
+							technical education is concerned. About 65 students attended the session. Among them, there
+							were
+							IEEE IAS student members of NSS Collge of Enginnering and Ammini College of Engineering. The
+							lecture was worth attending in which topics like Neural Networks and Deep Learning were
+							covered. At the end of the session all, the participants could understand the important
+							concepts
+							of machine learning.The session ended with the feedback from the students.
+						</p>
+				</div>
+			</div>
+
+			<div class="containe left">
+				<div class="content">
+					<h2><u>IEEE Membership Drive Orientation Class </u></h2> <br>
+					<h4> 6<sup>th</sup> Sept, 2019</h3><br>
+						<br>
+						<img src="img1/events/14.jpg" alt="Orientation Class" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">The class was scheduled for a couple of hours after 4 pm. All
+							the
+							students were informed about the event beforehand. Akarsh Ashok an IEEE SB NSSCE member
+							conducted the session. In the current scenario, he explained about the opportunities lies in
+							the
+							IEEE membership. IEEE membership is an excellent opportunity to showcase your leadership,
+							time
+							management and crowd control skills, he said. The session spoke about preparing a project
+							from
+							their own ideas using the basic procedures. Utilising the magazines produced by IEEE. Then
+							an
+							interactive session arranged between students and IEEE execom members. Students asked
+							different
+							doubts regarding IEEE membership. SB members cleared their doubts. More than half of the
+							students gathered in the class shown interest in taking IEEE membership.
+						</p>
+				</div>
+			</div>
+			<!--ASsfafasfasf-->
+			<div class="containe right">
+				<div class="content">
+					<h2><u>IAS Membership Drive </u></h2> <br>
+					<h4> 8<sup>th</sup> Aug, 2019</h3><br>
+						<img src="img1/events/13.jpg" alt="Membership Drive" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">The IEEE IAS Student Branch Chapter of NSS college of
+							Engineering
+							has conducted a IAS membership drive orientation class. The freshers from various part of
+							Kerala
+							has shown great participation in the orientation class. First year students will witness
+							much
+							more enthusiastic and entertaining programmes under the banner of IEEE IAS SBC NSSCE. The
+							class
+							started with some brief ideas about IEEE and other Societies, and explained how these
+							professional bodies work. Then class progressed with concentrating more about the Industry
+							Applications Society, Power Electronics Society and its benefits. The session was conducted
+							with
+							the aim to increase the membership strength in both societies. Session end up with answering
+							some doubts from students.
+						</p>
+				</div>
+			</div>
+
+			<div class="containe left">
+				<div class="content">
+					<h2><u>SPECTRUM TALK </u></h2> <br>
+					<h4>5G</h4><br>
+					<h4> 18<sup>th</sup> Mar, 2019</h3><br>
+						<br>
+						<img src="img1/events/12.jpg" alt="Spectrum talk" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">IEEE Student Branch of NSS College of Engineering, Palakkad has
+							conducted the Spectrum Talk on the topic 5G. It was the talk based on the topic which was
+							selected from the Spectrum, IEEE monthly magazine.
+							<br><br>
+							The session was taken by Ajith M,(Chairman IAS). 5G will revolutionize the mode of wireless
+							data
+							transfer. The talk was started by explaining the about 1G, 2G, 3G and 4G. Millimetre waves,
+							Small Cells, Massive MIMO, Beamforming and Full duplex are five technological advancement in
+							the
+							field of 5G. More people and devices are consuming more data than ever before, but it
+							remains
+							crammed on the same bands of the radio-frequency spectrum that mobile providers have always
+							used. Even if it is great development in the field of communication, 5G has its own
+							drawbacks.
+							The talk was concluded by an interactive session followed by the feedbacks from the
+							listeners.
+						</p>
+				</div>
+			</div>
+
+			<div class="containe right">
+				<div class="content">
+					<h2><u>Create It </u></h2> <br>
+					<h4>Worksop on Photoshop</h4><br>
+					<h4> 6<sup>th</sup> Mar, 2019</h3><br>
+						<img src="img1/events/11.jpg" alt="Workshop" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">IEEE Student Branch of NSS College of Engineering, Palakkad has
+							conducted the Workshop Create-It Workshop on Photoshop. The session was taken by Swathi
+							Sree.
+							The Workshop was scheduled for a couple of hours after 4 pm. All the students were informed
+							about the event beforehand. The session was conducted by Swathi Chandra R , IEEE SB NSSCE
+							member. In the current scenario , Digital promotions plays a pivotal role in marketing,
+							amongst
+							the most creative and efficient are being raised by Cooperatives. Photoshop serves as a
+							language
+							in communicating a detailed description of the product/event in a pixelated sheet. The
+							session
+							spoke about creating a digital poster from a blank page using the basic tools and layer
+							masks.
+							The workshop was concluded by an interactive session followed by a competition in designing
+							an
+							ID Card.</p>
+				</div>
+			</div>
+
+			<div class="containe left">
+				<div class="content">
+					<h2><u>SPECTRUM TALK </u></h2> <br>
+					<h4>QUANTUM COMPUTING</h4><br>
+					<h4> 26<sup>th</sup> Feb, 2019</h3><br>
+						<br>
+						<img src="img1/events/10.jpg" alt="Spectrum talk" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">IEEE Student Branch of NSS College of Engineering, Palakkad has
+							conducted the Spectrum Talk on the topic QUANTUM COMPUTING. It was the talk based on the
+							topic
+							which was selected from the Spectrum, IEEE monthly magazine.
+							<br><br>
+							The session was taken by Solomon Stuby. He presented two relevant problems that cannot be
+							solved
+							by a normal computer. This is where a Quantum computer can play its role. The main advantage
+							of
+							this technology is speed. Quantum computer can solve problems which a normal computer cannot
+							even think about. He explained what a ‘Qbit’ is and how it works with plenty of examples.
+							There
+							are still a lot of limitations for this technology to come into existence as its size is
+							very
+							large and it must be kept under a temperature of 15 millikelvins. The future scope of this
+							technology was also discussed. It was very useful session for the participants and they were
+							enthusiastic by being part of the spectrum talk. And it was a nice interactive session taken
+							by
+							the key speaker, Solomon Stuby.
+						</p>
+				</div>
+			</div>
+			<div class="containe right">
+				<div class="content">
+					<h2><u>SPECTRUM TALK </u></h2> <br>
+					<h4>FUTURE PROMISING NOISE
+						CANCELLING TECHNOLOGY </h4><br>
+					<h4> 21<sup>st</sup> Feb, 2019</h3><br>
+						<img src="img1/events/9.jpg" alt="Spectrum talk" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">IEEE Student Branch of NSS College of Engineering, Palakkad has
+							conducted the Spectrum Talk on the topic FUTURE PROMISING NOISE CANCELLING TECHNOLOGY. It
+							was
+							the talk based on the topic which was selected from the Spectrum, IEEE monthly magazine.
+							<br><br>
+							The session was taken by Nayana C T. She discussed about the importance of noice
+							cancellation
+							and working of MUTE technology. She mentioned about the changes that will happen in the
+							world of
+							technology by the introduction of such a product to the market and showed some videos on
+							this
+							experiment. It was conducted at eOne Hall, 4pm on 21st February 2019. About 30 students were
+							included in this session. It was very useful session for the participants and they were
+							enthusiastic by being part of the spectrum talk. And it was a nice interactive session taken
+							by
+							the key speaker,Nayana C T.</p>
+				</div>
+			</div>
+			<div class="containe left">
+				<div class="content">
+					<h2><u>Annual General Meeting</u></h2><br>
+					<h4> 20<sup>th</sup> Feb, 2019</h3><br>
+
+						<img src="img1/events/8.jpg" alt="AGM" class="img-responsive">
+						<br>
+						<p style="text-align: justify;">The meeting was held on 20th February 2019 that witnessed the
+							announcement of the new Execom members for the year 2019-20. The ceremony started with the
+							welcome address by former branch counsellor Dr Leesha Paul. Later on, Prof. Vijitha, the new
+							branch counsellor of the SB, addressed the students with a mind-blowing motivational speech.
+							The
+							forthcoming programs of IEEE for this year were also discussed. Ms Maria, the former
+							Secretary
+							of the SB submitted the annual report, which was followed by the momento delivery to former
+							branch counsellor Dr Leesha Paul by Prof. Vijitha. The newly selected Execom members were
+							called
+							to the stage by Arun, the Ex-chairman of IEEE SB for entrusting their positions. The meeting
+							was
+							winded up by a cake cutting ceremony and photograph session of the new Execom.</p>
+				</div>
+			</div>
+			<div class="containe right">
+				<div class="content">
+					<h2><u>AKIASSC'19</u></h2><br>
+					<h4> 8<sup>th</sup> - 10<sup>th</sup> Feb, 2019</h3><br>
+
+						<div class="slideshow-container">
+
+							<div class="mySlides">
+								<div class="numbertext">1 / 7</div>
+								<img src="img1/events/	1.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 7</div>
+								<img src="img1/events/2.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 7</div>
+								<img src="img1/events/3.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 7</div>
+								<img src="img1/events/4.jpg" style="width:100%">
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">5 / 7</div>
+								<img src="img1/events/5.jpg" style="width:100%">
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">6 / 7</div>
+								<img src="img1/events/6.jpg" style="width:100%">
+							</div>
+							<div class="mySlides">
+								<div class="numbertext">7 / 7</div>
+								<img src="img1/events/7.jpg" style="width:100%">
+							</div>
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						</div>
+						<br>
+
+
+						<br>
+						<p style="text-align: justify;">The core aim of conducting AKIASSC19 is to foster technological
+							innovation and excellence for the benefit of humanity. By conducting different Workshopss
+							and
+							meetings with industrial experts, the students can increase their knowledge and technical
+							skills. AKIASSC'19 is the best place to show their talents and to develop their technical
+							skills.The 3-day event top up with technical knowledge, managerial activities and an immense
+							platform for networking. The most anticipated first edition of AKIASSC will support
+							professionals engaged in the industries & research institutes of electrical and electronic
+							engineering become a leading provider of scientific and engineering information on industry
+							and
+							its application.</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="gallery" class="works clearfix">
+		<div class="container">
+			<div class="row">
+
+				<div class="sec-title text-center">
+					<h2>GALLERY</h2>
+					<div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
+				</div>
+
+				<div class="sec-sub-title text-center">
+					<p>Check out the Candid Moments</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-wrapper">
+
+			<figure class="mix work-item branding">
+				<img src="img1/events/27.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/27.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item web">
+				<img src="img1/events/28.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/28.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item logo-design">
+				<img src="img1/events/29.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/29.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item photography">
+				<img src="img1/events/30.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/30.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item branding">
+				<img src="img1/events/31.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/31.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item web">
+				<img src="img1/events/32.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/32.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<figure class="mix work-item logo-design">
+				<img src="img1/events/33.jpg" alt="">
+				<figcaption class="overlay">
+					<a class="fancybox" rel="works" title="" href="img1/events/33.jpg"><i
+							class="fa fa-eye fa-lg"></i></a>
+				</figcaption>
+			</figure>
+
+			<!--<figure class="mix work-item photography">
+					<img src="img/works/item-8.jpg" alt="">
+					<figcaption class="overlay">
+						<a class="fancybox" rel="works" title="Write Your Image Caption Here" href="img/works/item-8.jpg"><i class="fa fa-eye fa-lg"></i></a>
+						<h4>Labore et dolore magnam</h4>
+						<p>Photography</p>
+					</figcaption>-->
+			</figure>
+
+		</div>
+
+
+	</section>
+
+
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms">
+					<div class="footer-single">
+						<img src="img1/footer-logo.png" alt="">
+						<p>IEEE is the world's largest technical professional organization dedicated to advancing
+							technology for the benefit of humanity.IEEE and its members inspire a global community
+							to
+							innovate for a better tomorrow through its more than 423,000 members in over 160
+							countries,
+							and its highly cited publications, conferences, technology standards, and professional
+							and
+							educational activities. IEEE is the trusted “voice” for engineering, computing, and
+							technology information around the globe.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms"
+					data-wow-delay="300ms">
+					<ul class="address">
+						<br><br><br>
+						<li><i class="fa fa-map-marker"></i> <span>Office Address:</span> IEEE, NSSCE,
+							Akathethara,Palakkad P.O. 678008</li>
+						<li><i class="fa fa-phone"></i> <span> Phone:</span> <a href="tel:+917034121767">+91
+								7034121767</a> </li>
+						<li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:anjalidka@gmail.com">
+								anjalidka@gmail.com</a></li>
+					</ul>
+
+				</div>
+				</p>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+	<a href="javascript:void(0);" id="back-top"><i class="fa fa-angle-up fa-3x"></i></a>
+
+	<!-- Essential jQuery Plugins
+		================================================== -->
+	<!-- Main jQuery -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- Single Page Nav -->
+	<script src="js/jquery.singlePageNav.min.js"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jquery.fancybox.pack -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<!-- jquery.mixitup.min -->
+	<script src="js/jquery.mixitup.min.js"></script>
+	<!-- jquery.parallax -->
+	<script src="js/jquery.parallax-1.1.3.js"></script>
+	<!-- jquery.countTo -->
+	<script src="js/jquery-countTo.js"></script>
+	<!-- jquery.appear -->
+	<script src="js/jquery.appear.js"></script>
+	<!-- jquery easing -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- jquery easing -->
+	<script src="js/wow.min.js"></script>
+	<script>
+		var wow = new WOW({
+			boxClass: 'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset: 120,          // distance to the element when triggering the animation (default is 0)
+			mobile: false,       // trigger animations on mobile devices (default is true)
+			live: true        // act on asynchronously loaded content (default is true)
+		}
+		);
+		wow.init();
+	</script>
+	<!-- Custom Functions -->
+	<script src="js/custom.js"></script>
+
+	<script>
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
+
+
+</body>
+
+</html>
